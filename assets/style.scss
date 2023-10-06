@@ -1,0 +1,134 @@
+:root {
+  --main: #f1eded;
+  --text: #cfcccc;
+  --unactive: #a7a7a7;
+  --red: #de2248;
+  --error: #f2c94c;
+  --black: #000000;
+  --white: #ffffff;
+  --text12: 0.75rem;
+  --text14: 0.875rem;
+  --text16: clamp(0.875rem, 0.8vw, 1rem);
+  --text18: 1.125rem;
+  --text20: clamp(0.75rem, 1vw, 1.25rem);
+  --textButton20: clamp(1rem, 1vw, 1.25rem);
+  --text28: clamp(1.25rem, 1.45vw, 1.75rem);
+  --text32: clamp(1.5rem, 1.6vw, 2rem);
+  --text36: clamp(1.25rem, 1.8vw, 2.25rem);
+  --text64: clamp(1.25rem, 3.4vw, 4rem);
+  --text96: clamp(2.25rem, 4.8vw, 6rem);
+  --text168: 10.5rem;
+  --vertical80: clamp(2rem, 4vw, 5rem);
+  --vertical90: clamp(2rem, 4.5vw, 5.625rem);
+  --vertical150: clamp(5rem, 7.5vw, 9.375rem);
+}
+@font-face {
+  font-family: 'Transducer-regular';
+  src: url('/fonts/transducer-regular.woff2') format('woff2'),
+    url('/fonts/transducer-regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Transducer-bold';
+  src: url('/fonts/transducer-bold.woff2') format('woff2'),
+    url('/fonts/transducer-bold.woff') format('woff');
+  font-display: swap;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  line-height: 1;
+  font-family: 'Transducer-regular';
+}
+body {
+  margin: 0;
+  background-color: var(--black);
+}
+svg {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: inherit;
+}
+
+h4 {
+  font-size: var(--text18);
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+body > div {
+  position: relative;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wrapper {
+  max-width: 1472px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.center-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 24px;
+  padding-top: 64px;
+
+  &__line {
+    flex: 1 0 auto;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(167, 167, 167, 0.58);
+  }
+}
+
+@media (min-width: 2000px) {
+  :root {
+    --text168: 12.5rem;
+  }
+}
+
+@media (min-width: 2600px) {
+  :root {
+    --text168: 16rem;
+  }
+}
+
+@media (max-width: 1679px) {
+  :root {
+    --text168: 8.125rem;
+  }
+}
+
+@media (max-width: 1479px) {
+  :root {
+    --text168: 7rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .center-button {
+    padding-top: 32px;
+
+    &__line {
+      display: none;
+    }
+  }
+}
